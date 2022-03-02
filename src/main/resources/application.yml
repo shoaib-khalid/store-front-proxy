@@ -1,0 +1,20 @@
+## YAML Template.
+---
+spring:
+    cloud:
+        gateway:
+            routes:
+            - id: organic_route
+              uri: http://organic.storefront.com 
+              predicates:
+              - Host=ideal-foods.symplified.test
+
+            - id: fuse_route
+              uri: http://fuse.storefront.com
+              predicates:
+              - Host=mcd.symplified.test
+              
+            - id: old_route
+              uri: http://old.storefront.com
+              predicates:
+              - Host=awan-tech.symplified.test
